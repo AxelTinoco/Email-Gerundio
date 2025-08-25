@@ -7,6 +7,6 @@
     "noEmit": true,
     "strictNullChecks": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "emails/index.js"],
   "exclude": ["node_modules", ".react-email"]
 }
