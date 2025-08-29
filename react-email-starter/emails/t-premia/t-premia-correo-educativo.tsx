@@ -6,12 +6,13 @@ import {
   Head,
   Html,
   Img,
+  Link,
   pixelBasedPreset,
   Row,
   Section,
   Tailwind,
   Text,
-} from '@react-email/components';
+} from "@react-email/components";
 
 interface TpremiaUserEmailProps {
   username?: string;
@@ -19,12 +20,9 @@ interface TpremiaUserEmailProps {
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : 'https://0f04a5ee825c.ngrok-free.app';
+  : "https://0f04a5ee825c.ngrok-free.app";
 
-export const TpremiaEducativeEmail = ({
-  username,
-}: TpremiaUserEmailProps) => {
-
+export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
   // const previewText = `Join ${invitedByUsername} on Vercel`;
 
   return (
@@ -43,6 +41,18 @@ export const TpremiaEducativeEmail = ({
           }
           .banner-hero-mobile{
             display:none;
+          }
+
+          .column-gems-main{
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+          
+          .gems-left-side{
+            padding-righ: 8px:
+          }
+          .gems-right-side{
+            padding-left: 8px:
           }
           
           @media (max-width: 375px) {
@@ -75,12 +85,25 @@ export const TpremiaEducativeEmail = ({
             .banner-hero-mobile{
               display:inline-table;
             }
+
+            .column-gems-main{
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+          
+            .gems-left-side{
+              padding-righ: 2px:
+            }
+            .gems-right-side{
+              padding-left: 0px:
+            }
+            
           }
         `}</style>
       </Head>
       {/* <Preview>{previewText}</Preview> */}
       <Tailwind
-          config={{
+        config={{
           presets: [pixelBasedPreset],
         }}
       >
@@ -96,89 +119,109 @@ export const TpremiaEducativeEmail = ({
                 className="mx-auto my-0"
               />
             </Section>
-            <Row className=' mt-[24px] mb-[32px] gems-container'>
-              <Column align="center" className="h-[40px] w-2/3 bg-[#F6F6F6] px-4">
-                <Row>
-                  <Column className="pr-4">
-                    <Row>
-                      <Column align="left" width="32px">
-                        <Img
-                          // src={`${baseUrl}/static/t-premia/gema-rosa.png`}
-                          src={`https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema-rosa_kb2wbi.png`}
-
-                          width="32px"
-                          height="auto"
-                          alt="t-premia"
-                        />
-                      </Column>
-                      <Column align="left" className="pl-2">
-                        <Text className="m-0 text-[16px] whitespace-nowrap">
-                          500 gemas
-                        </Text>
-                      </Column>
-                    </Row>
-                  </Column>
-                  <Column className="pl-4">
-                    <Row>
-                      <Column align="center" width="32px">
-                        <Img
-                          // src={`${baseUrl}/static/t-premia/gema-dorada.png`}
-                          src={`https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema-dorada_lebvou.png`}
-                          width="32px"
-                          height="auto"
-                          alt="t-premia"
-                        />
-                      </Column>
-                      <Column align="left" className="pl-2">
-                        <Text className="m-0 text-[16px] whitespace-nowrap">
-                          500 gemas
-                        </Text>
-                      </Column>
-                    </Row>
-                  </Column>
-                </Row>
-              </Column>
-              <Column align="center" className="button-desktop h-[60px] w-full pl-4">
-                <Button
-                  className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] text-white no-underline"
-                  href={""}
+            <Section className="mx-auto">
+              <Row className=" mt-[24px] mb-[32px] gems-container">
+                <Column
+                  align="center"
+                  className="h-[40px] w-2/3 bg-[#F6F6F6] column-gems-main"
                 >
-                  Ir a mi cuenta
-                </Button>
-              </Column>
-            </Row>
-            <Section className="button-mobile">
-              <Row className='mt-[24px]'>
-                <Column align="left" className="h-[60px] w-full pl-4">
+                  <Row>
+                    <Column className="gems-left-side">
+                      <Row>
+                        <Column align="left" width="32px">
+                          <Img
+                            // src={`${baseUrl}/static/t-premia/gema-rosa.png`}
+                            src={`https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema-rosa_kb2wbi.png`}
+                            width="32px"
+                            height="auto"
+                            alt="t-premia"
+                          />
+                        </Column>
+                        <Column align="left" className="pl-2">
+                          <Text className="m-0 text-[16px] whitespace-nowrap">
+                            %%%% gemas
+                          </Text>
+                        </Column>
+                      </Row>
+                    </Column>
+                    <Column className="gems-right-side">
+                      <Row>
+                        <Column align="center" width="32px">
+                          <Img
+                            // src={`${baseUrl}/static/t-premia/gema-dorada.png`}
+                            src={`https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema-dorada_lebvou.png`}
+                            width="32px"
+                            height="auto"
+                            alt="t-premia"
+                          />
+                        </Column>
+                        <Column align="left" className="pl-2">
+                          <Text className="m-0 text-[16px] whitespace-nowrap">
+                            %%%% gemas
+                          </Text>
+                        </Column>
+                      </Row>
+                    </Column>
+                  </Row>
+                </Column>
+                <Column
+                  align="center"
+                  className="button-desktop h-[60px] w-full pl-4 mx-auto"
+                >
                   <Button
-                    className="mobile-button rounded-full bg-[#319948] py-5 text-center font-semibold text-[12px] text-white no-underline"
-                    href={""}
+                    className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] text-white no-underline"
+                    href={"https://www.newtpremia.com.mx/login"}
                   >
                     Ir a mi cuenta
                   </Button>
                 </Column>
               </Row>
-
             </Section>
-            
-           
+
+            <Section className="button-mobile">
+              <Row className="mt-[24px]">
+                <Column
+                  align="left"
+                  className="h-[60px] w-[347px] pl-4 mx-auto"
+                >
+                  <Button
+                    className="mobile-button rounded-full bg-[#319948] py-5 text-center font-semibold text-[12px] text-white no-underline"
+                    href={"https://www.newtpremia.com.mx/login"}
+                  >
+                    Ir a mi cuenta
+                  </Button>
+                </Column>
+              </Row>
+            </Section>
+
             <Section className="mx-0 my-[30px] banner-hero-desktop">
               <Row>
                 <Column
                   style={{
                     // backgroundImage: `url(${baseUrl}/static/t-premia/educativo/hero_name.png)`,
                     backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893630/hero_name_yxl4vn.png)`,
-                    backgroundSize: 'contain',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    height: '250px',
-                    width: '100%'
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    height: "250px",
+                    width: "100%",
                   }}
                 >
-                  <Row style={{ height: '150px' }}>
-                    <Column style={{ verticalAlign: 'middle', textAlign: 'center' }} className='banner-hero'>
-                      <Text className="text-[28px] text-black leading-[32px]" style={{ margin: 0, fontSize: '28px', lineHeight: '32px', color: '#000000' }}>
-                        <strong>¡Hola, {username}!</strong>
+                  <Row style={{ height: "150px" }}>
+                    <Column
+                      style={{ verticalAlign: "middle", textAlign: "center" }}
+                      className="banner-hero"
+                    >
+                      <Text
+                        className="text-[28px] text-black leading-[32px]"
+                        style={{
+                          margin: 0,
+                          fontSize: "28px",
+                          lineHeight: "32px",
+                          color: "#000000",
+                        }}
+                      >
+                        <strong>¡Hola, %%%%!</strong>
                       </Text>
                     </Column>
                   </Row>
@@ -193,18 +236,33 @@ export const TpremiaEducativeEmail = ({
                   style={{
                     // backgroundImage: `url(${baseUrl}/static/t-premia/gema_name_mobile.png)`,
                     backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema_name_mobile_qfz6wk.png)`,
-                    backgroundSize: 'contain',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    height: '300px',
-                    width: '100%',
-                    display: 'inline-table',
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    height: "300px",
+                    width: "100%",
+                    display: "inline-table",
                   }}
                 >
-                  <Row style={{ height: 'auto' }}>
-                    <Column style={{ textAlign: 'left', padding: '20px' , paddingLeft: '15px', paddingTop: '200px'}}>
-                      <Text className="text-[28px] text-black leading-[32px]" style={{ margin: 0, fontSize: '28px', lineHeight: '32px', color: '#000000' }}>
-                        <strong>¡Hola, {username}!</strong>
+                  <Row style={{ height: "auto" }}>
+                    <Column
+                      style={{
+                        textAlign: "left",
+                        padding: "20px",
+                        paddingLeft: "15px",
+                        paddingTop: "200px",
+                      }}
+                    >
+                      <Text
+                        className="text-[28px] text-black leading-[32px]"
+                        style={{
+                          margin: 0,
+                          fontSize: "28px",
+                          lineHeight: "32px",
+                          color: "#000000",
+                        }}
+                      >
+                        <strong>¡Hola, %%%%!</strong>
                       </Text>
                     </Column>
                   </Row>
@@ -213,12 +271,12 @@ export const TpremiaEducativeEmail = ({
             </Section>
             {/* banner hero name mobile */}
 
-
             <Text className="text-[28px] text-black leading-[24px] text-center">
               <strong>¡Conoce tus recompensas!</strong>
             </Text>
             <Text className="text-[16px] leading-[24px] text-center">
-              Con tus gemas disfruta de grandes descuentos, conciertos y experiencias únicas
+              Con tus gemas disfruta de grandes descuentos, conciertos y
+              experiencias únicas
             </Text>
             <Section>
               <Row>
@@ -231,10 +289,10 @@ export const TpremiaEducativeEmail = ({
                     height="auto"
                   />
                 </Column>
-                <Section style={{ textAlign: 'center', marginTop: '20px' }}>
+                <Section style={{ textAlign: "center", marginTop: "20px" }}>
                   <Button
                     className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] text-white no-underline"
-                    href={""}
+                    href={"https://www.newtpremia.com.mx/recompensas"}
                   >
                     Ir a recompensas
                   </Button>
@@ -246,20 +304,34 @@ export const TpremiaEducativeEmail = ({
                 <strong>Descubre más sobre las gemas.</strong>
               </Text>
               <Text className="text-[28px]">
-                <strong>¡Da <a href="%%%%" className='text-[#FF289B]'>clic</a> para conocer!</strong>
+                <strong>
+                  ¡Da{" "}
+                  <a
+                    href="https://www.youtube.com/watch?v=PC2X0Luu_uM"
+                    className="text-[#FF289B]"
+                  >
+                    clic
+                  </a>{" "}
+                  para conocer!
+                </strong>
               </Text>
             </Section>
             <Section className="mt-[32px] mb-[32px] text-center max-w-[650px] mx-auto p-[20px]">
-             <Row>
+              <Row>
                 <Column align="center">
-                  <Img
-                    className=""
-                    // src={`${baseUrl}/static/t-premia/gema_video.png`}
-                    src={`https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema_video_hr63vf.png`}
-
-                    width="100%"
-                    height="auto"
-                  />
+                  <Link
+                    href="https://www.youtube.com/watch?v=PC2X0Luu_uM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Img
+                      className=""
+                      // src={`${baseUrl}/static/t-premia/gema_video.png`}
+                      src={`https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema_video_hr63vf.png`}
+                      width="100%"
+                      height="auto"
+                    />
+                  </Link>
                 </Column>
               </Row>
             </Section>
@@ -268,23 +340,23 @@ export const TpremiaEducativeEmail = ({
                 <strong>¡Domina toda la información sobre</strong>
               </Text>
               <Text className="text-[28px]">
-                 <strong>misiones y actívalas!</strong>
+                <strong>misiones y actívalas!</strong>
               </Text>
               <Text className="text-[16px] leading-[24px] mt-[24px]">
-                Chécate las misiones de tpremia y de nuestros aliados. 
+                Chécate las misiones de tpremia y de nuestros aliados.
               </Text>
-               <Text className="text-[16px] leading-[10px]">
+              <Text className="text-[16px] leading-[10px]">
                 Actívalas y empieza a cumplirlas.
               </Text>
-               <Text className="text-[16px] leading-[10px]">
-                 ¡Ve a descubrirlas y acumula muchas gemas! 
+              <Text className="text-[16px] leading-[10px]">
+                ¡Ve a descubrirlas y acumula muchas gemas!
               </Text>
             </Section>
 
-            <Section style={{ textAlign: 'center', marginTop: '20px' }}>
+            <Section style={{ textAlign: "center", marginTop: "20px" }}>
               <Button
                 className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] text-white no-underline"
-                href={"%%%%"}
+                href={"https://www.newtpremia.com.mx/valor-gemas"}
               >
                 Ir a central de misiones
               </Button>
@@ -297,22 +369,38 @@ export const TpremiaEducativeEmail = ({
                     // backgroundImage: `url(${baseUrl}/static/t-premia/Banner_gema_gift.png)`,
                     backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893468/Banner_gema_gift_qfxyte.png)`,
 
-                    backgroundSize: 'contain',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    height: '350px',
-                    width: '100%'
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    height: "350px",
+                    width: "100%",
                   }}
                 >
-                  <Row style={{ height: '150px' }}>
-                    <Column style={{ verticalAlign: 'middle', textAlign: 'left', padding: '20px' , paddingLeft: '50px'}}>
-                      <Text className="text-[20px] text-black leading-[32px]" style={{ margin: 0, lineHeight: '32px', color: '#000000' }}>
-                        <strong>¡Activa hoy mismo tus misiones <br />
-                        y empieza a disfrutar ya!</strong>
+                  <Row style={{ height: "150px" }}>
+                    <Column
+                      style={{
+                        verticalAlign: "middle",
+                        textAlign: "left",
+                        padding: "20px",
+                        paddingLeft: "50px",
+                      }}
+                    >
+                      <Text
+                        className="text-[20px] text-black leading-[32px]"
+                        style={{
+                          margin: 0,
+                          lineHeight: "32px",
+                          color: "#000000",
+                        }}
+                      >
+                        <strong>
+                          ¡Activa hoy mismo tus misiones <br />y empieza a
+                          disfrutar ya!
+                        </strong>
                       </Text>
                       <Button
                         className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] mt-[16px] text-white no-underline"
-                        href={"%%%%"}
+                        href={"https://newtpremia.com.mx"}
                       >
                         ¡Vamos a tpremia!
                       </Button>
@@ -330,31 +418,39 @@ export const TpremiaEducativeEmail = ({
                   style={{
                     // backgroundImage: `url(${baseUrl}/static/t-premia/Banner-mobile-gema-gift.png)`,
                     backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/Banner-mobile-gema-gift_aapyqz.png)`,
-                    backgroundSize: 'contain',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    height: '400px',
-                    width: '100%',
-                    display: 'inline-table',
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    height: "400px",
+                    width: "100%",
+                    display: "inline-table",
                   }}
                 >
-                    <Section style={{ textAlign: 'center' , paddingTop: '32px'   }}>
-                      <Text className="text-[18px] text-black leading-[32px]" style={{ margin: 0, lineHeight: '32px', color: '#000000' }}>
-                        <strong>¡Activa hoy mismo tus misiones <br />
-                        y empieza a disfrutar ya!</strong>
-                      </Text>
-                      <Button
-                        className="rounded-full w-[200px] bg-[#319948] px-5 py-5 text-center font-semibold text-[10px] mt-[16px] text-white no-underline"
-                        href={"%%%%"}
-                      >
-                        ¡Vamos a tpremia!
-                      </Button>
-                    </Section>
+                  <Section style={{ textAlign: "center", paddingTop: "32px" }}>
+                    <Text
+                      className="text-[18px] text-black leading-[32px]"
+                      style={{
+                        margin: 0,
+                        lineHeight: "32px",
+                        color: "#000000",
+                      }}
+                    >
+                      <strong>
+                        ¡Activa hoy mismo tus misiones <br />y empieza a
+                        disfrutar ya!
+                      </strong>
+                    </Text>
+                    <Button
+                      className="rounded-full w-[200px] bg-[#319948] px-5 py-5 text-center font-semibold text-[10px] mt-[16px] text-white no-underline"
+                      href={"https://newtpremia.com.mx"}
+                    >
+                      ¡Vamos a tpremia!
+                    </Button>
+                  </Section>
                 </Column>
               </Row>
             </Section>
             {/* Banner Gift Mobile */}
-
 
             <Section className="text-center mb-[24px]">
               <table className="w-full">
@@ -372,16 +468,31 @@ export const TpremiaEducativeEmail = ({
                 <tr className="w-full">
                   <td align="center">
                     <Text className="my-[8px] font-light text-[10px] text-[#838383] leading-[24px]">
-                      ¡No te quedes con dudas! Escríbenos y lo resolvemos juntos en: <a href="mailto:hola@tpremia.com.mx" className='text-[#319948]'>hola@tpremia.com.mx</a>
+                      ¡No te quedes con dudas! Escríbenos y lo resolvemos juntos
+                      en:{" "}
+                      <a
+                        href="mailto:hola@tpremia.com.mx"
+                        className="text-[#319948]"
+                      >
+                        hola@tpremia.com.mx
+                      </a>
                     </Text>
                     <Text className="mt-[4px] mb-0 text-[10px] text-[#838383] leading-[24px]">
-                      Si deseas dejar de recibir nuestras comunicaciones, haz clic aquí para cancelar tu suscripción.
+                      Si deseas dejar de recibir nuestras comunicaciones, haz
+                      clic aquí para cancelar tu suscripción.
                     </Text>
                     <Text className="mt-[24px] mb-0 text-[10px] text-[#838383] leading-[15px]">
-                      Consulta términos y condiciones en tpremia.com.mx
+                      Consulta términos y condiciones en{" "}
+                      <Link
+                        href="https://www.newtpremia.com.mx/terminos-y-condiciones"
+                        className="text-[#319948]"
+                      >
+                        tpremia.com.mx
+                      </Link>
                     </Text>
                     <Text className="mt-[4px] mb-0 text-[10px] text-[#838383] leading-[15px]">
-                      Todas las operaciones al amparo de este programas son otorgadas por Banco Azteca, S.A.,
+                      Todas las operaciones al amparo de este programas son
+                      otorgadas por Banco Azteca, S.A.,
                     </Text>
                     <Text className="mt-[4px] mb-0 text-[10px] text-[#838383] leading-[15px]">
                       Institución de Banca Múltiple.
@@ -390,8 +501,6 @@ export const TpremiaEducativeEmail = ({
                 </tr>
               </table>
             </Section>
-            
-            
           </Container>
         </Body>
       </Tailwind>
@@ -400,15 +509,15 @@ export const TpremiaEducativeEmail = ({
 };
 
 TpremiaEducativeEmail.PreviewProps = {
-  username: 'alanturing',
+  username: "alanturing",
   userImage: `${baseUrl}/static/vercel-user.png`,
-  invitedByUsername: 'Alan',
-  invitedByEmail: 'alan.turing@example.com',
-  teamName: 'Enigma',
+  invitedByUsername: "Alan",
+  invitedByEmail: "alan.turing@example.com",
+  teamName: "Enigma",
   teamImage: `${baseUrl}/static/vercel-team.png`,
-  inviteLink: 'https://vercel.com/teams/invite/foo',
-  inviteFromIp: '204.13.186.218',
-  inviteFromLocation: 'São Paulo, Brazil',
+  inviteLink: "https://vercel.com/teams/invite/foo",
+  inviteFromIp: "204.13.186.218",
+  inviteFromLocation: "São Paulo, Brazil",
 } as TpremiaUserEmailProps;
 
 export default TpremiaEducativeEmail;
