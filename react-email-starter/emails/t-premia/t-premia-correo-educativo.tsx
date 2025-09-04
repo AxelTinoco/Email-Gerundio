@@ -28,6 +28,8 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
   return (
     <Html>
       <Head>
+        <meta name="color-scheme" content="light" />
+        <meta name="supported-color-schemes" content="light dark" />
         <style>{`
           .button-mobile {
             display: none;
@@ -47,14 +49,44 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
             padding-left: 16px;
             padding-right: 16px;
           }
-          
+
           .gems-left-side{
             padding-righ: 8px:
           }
           .gems-right-side{
             padding-left: 8px:
           }
-          
+
+          /* Override Outlook dark mode */
+          [data-ogsc] .force-black-text {
+            color: #000000 !important;
+          }
+          [data-ogsb] .force-black-text {
+            color: #000000 !important;
+          }
+
+          /* Fix button styling for Outlook */
+          .account-button {
+            display: inline-block !important;
+            white-space: nowrap !important;
+            min-width: 90px !important;
+            text-align: center !important;
+
+          }
+
+          [data-ogsc] .account-button {
+            display: inline-block !important;
+            white-space: nowrap !important;
+            min-width: 90px !important;
+
+          }
+          [data-ogsb] .account-button {
+            display: inline-block !important;
+            white-space: nowrap !important;
+            min-width: 90px !important;
+
+          }
+
           @media (max-width: 375px) {
             .button-desktop {
               display: none !important;
@@ -66,9 +98,6 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
             }
             .mobile-button {
               width: 100% !important;
-            }
-            .banner-gema-gift {
-              display: none;
             }
             .banner-gema-mobile-gift {
             display: inline-table;
@@ -90,14 +119,14 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
               padding-left: 0px;
               padding-right: 0px;
             }
-          
+
             .gems-left-side{
               padding-righ: 2px:
             }
             .gems-right-side{
               padding-left: 0px:
             }
-            
+
           }
         `}</style>
       </Head>
@@ -138,7 +167,7 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                           />
                         </Column>
                         <Column align="left" className="pl-2">
-                          <Text className="m-0 text-[16px] whitespace-nowrap">
+                          <Text className="m-0 text-[14px] whitespace-nowrap">
                             %%%% gemas
                           </Text>
                         </Column>
@@ -156,7 +185,7 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                           />
                         </Column>
                         <Column align="left" className="pl-2">
-                          <Text className="m-0 text-[16px] whitespace-nowrap">
+                          <Text className="m-0 text-[14px] whitespace-nowrap">
                             %%%% gemas
                           </Text>
                         </Column>
@@ -166,11 +195,19 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                 </Column>
                 <Column
                   align="center"
-                  className="button-desktop h-[60px] w-full pl-4 mx-auto"
+                  className="w-1/3"
+                  style={{ minWidth: "110px" }}
                 >
                   <Button
-                    className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] text-white no-underline"
+                    className="rounded-full bg-[#319948] px-2 py-3 text-center font-semibold text-[12px] text-white no-underline account-button"
                     href={"https://www.newtpremia.com.mx/login"}
+                    style={{
+                      display: "inline-block",
+                      whiteSpace: "nowrap",
+                      minWidth: "90px",
+                      textAlign: "center",
+                      lineHeight: "16px"
+                    }}
                   >
                     Ir a mi cuenta
                   </Button>
@@ -178,23 +215,7 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
               </Row>
             </Section>
 
-            <Section className="button-mobile">
-              <Row className="mt-[24px]">
-                <Column
-                  align="left"
-                  className="h-[60px] w-[347px] pl-4 mx-auto"
-                >
-                  <Button
-                    className="mobile-button rounded-full bg-[#319948] py-5 text-center font-semibold text-[12px] text-white no-underline"
-                    href={"https://www.newtpremia.com.mx/login"}
-                  >
-                    Ir a mi cuenta
-                  </Button>
-                </Column>
-              </Row>
-            </Section>
-
-            <Section className="mx-0 my-[30px] banner-hero-desktop">
+            <Section className="mx-0 my-[30px]">
               <Row>
                 <Column
                   style={{
@@ -203,17 +224,17 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                     backgroundSize: "contain",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    height: "250px",
+                    height: "auto",
                     width: "100%",
                   }}
                 >
                   <Row style={{ height: "150px" }}>
                     <Column
                       style={{ verticalAlign: "middle", textAlign: "center" }}
-                      className="banner-hero"
+                      className="pl-[145px]"
                     >
                       <Text
-                        className="text-[28px] text-black leading-[32px]"
+                        className="text-[28px] text-black leading-[32px] ml-[20px]"
                         style={{
                           margin: 0,
                           fontSize: "28px",
@@ -229,55 +250,20 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
               </Row>
             </Section>
 
-            {/* banner hero name mobile */}
-            <Section className="mx-0 my-[30px] banner-hero-mobile">
+            <Section>
               <Row>
-                <Column
-                  style={{
-                    // backgroundImage: `url(${baseUrl}/static/t-premia/gema_name_mobile.png)`,
-                    backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema_name_mobile_qfz6wk.png)`,
-                    backgroundSize: "contain",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    height: "300px",
-                    width: "100%",
-                    display: "inline-table",
-                  }}
-                >
-                  <Row style={{ height: "auto" }}>
-                    <Column
-                      style={{
-                        textAlign: "left",
-                        padding: "20px",
-                        paddingLeft: "15px",
-                        paddingTop: "200px",
-                      }}
-                    >
-                      <Text
-                        className="text-[28px] text-black leading-[32px]"
-                        style={{
-                          margin: 0,
-                          fontSize: "28px",
-                          lineHeight: "32px",
-                          color: "#000000",
-                        }}
-                      >
-                        <strong>¡Hola, %%%%!</strong>
-                      </Text>
-                    </Column>
-                  </Row>
+                <Column>
+                  <Text className="text-[28px] text-black leading-[24px] text-center">
+                    <strong>¡Conoce tus recompensas!</strong>
+                  </Text>
+                  <Text className="text-[16px] leading-[24px] text-center">
+                    Con tus gemas disfruta de grandes descuentos, conciertos y
+                    experiencias únicas
+                  </Text>
                 </Column>
               </Row>
             </Section>
-            {/* banner hero name mobile */}
 
-            <Text className="text-[28px] text-black leading-[24px] text-center">
-              <strong>¡Conoce tus recompensas!</strong>
-            </Text>
-            <Text className="text-[16px] leading-[24px] text-center">
-              Con tus gemas disfruta de grandes descuentos, conciertos y
-              experiencias únicas
-            </Text>
             <Section>
               <Row>
                 <Column align="center">
@@ -289,34 +275,44 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                     height="auto"
                   />
                 </Column>
-                <Section style={{ textAlign: "center", marginTop: "20px" }}>
-                  <Button
-                    className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] text-white no-underline"
-                    href={"https://www.newtpremia.com.mx/recompensas"}
-                  >
-                    Ir a recompensas
-                  </Button>
-                </Section>
+
+              </Row>
+              <Row>
+                <Column align="center">
+                  <Section style={{ textAlign: "center", marginTop: "20px" }}>
+                    <Button
+                      className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] text-white no-underline"
+                      href={"https://www.newtpremia.com.mx/recompensas"}
+                    >
+                      Ir a recompensas
+                    </Button>
+                  </Section>
+                </Column>
               </Row>
             </Section>
             <Section className="mt-[32px] mb-[32px] text-center">
-              <Text className="text-[28px] leading-[30px]">
-                <strong>Descubre más sobre las gemas.</strong>
-              </Text>
-              <Text className="text-[28px]">
-                <strong>
-                  ¡Da{" "}
-                  <a
-                    href="https://www.youtube.com/watch?v=PC2X0Luu_uM"
-                    className="text-[#FF289B]"
-                  >
-                    clic
-                  </a>{" "}
-                  para conocer!
-                </strong>
-              </Text>
+              <Row>
+                <Column align="center">
+                  <Text className="text-[28px] leading-[30px]">
+                    <strong>Descubre más sobre las gemas.</strong>
+                  </Text>
+                  <Text className="text-[28px]">
+                    <strong>
+                      ¡Da{" "}
+                      <a
+                        href="https://www.youtube.com/watch?v=PC2X0Luu_uM"
+                        className="text-[#FF289B]"
+                      >
+                        clic
+                      </a>{" "}
+                      para conocer!
+                    </strong>
+                  </Text>
+                </Column>
+              </Row>
+
             </Section>
-            <Section className="mt-[32px] mb-[32px] text-center max-w-[650px] mx-auto p-[20px]">
+            <Section className="mt-[32px] mb-[32px] text-center max-w-[650px] mx-auto">
               <Row>
                 <Column align="center">
                   <Link
@@ -335,22 +331,26 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                 </Column>
               </Row>
             </Section>
-            <Section className="mt-[32px] mb-[32px] text-center">
-              <Text className="text-[28px] leading-[30px]">
-                <strong>¡Domina toda la información sobre</strong>
-              </Text>
-              <Text className="text-[28px]">
-                <strong>misiones y actívalas!</strong>
-              </Text>
-              <Text className="text-[16px] leading-[24px] mt-[24px]">
-                Chécate las misiones de tpremia y de nuestros aliados.
-              </Text>
-              <Text className="text-[16px] leading-[10px]">
-                Actívalas y empieza a cumplirlas.
-              </Text>
-              <Text className="text-[16px] leading-[10px]">
-                ¡Ve a descubrirlas y acumula muchas gemas!
-              </Text>
+            <Section className="mt-[32px] mb-[32px] text-center mx-auto">
+              <Row>
+                <Column align="center">
+                  <Text className="text-[28px] leading-[30px]">
+                    <strong>¡Domina toda la información sobre</strong>
+                  </Text>
+                  <Text className="text-[28px]">
+                    <strong>misiones y actívalas!</strong>
+                  </Text>
+                  <Text className="text-[16px] leading-[24px] mt-[24px]">
+                    Chécate las misiones de tpremia y de nuestros aliados.
+                  </Text>
+                  <Text className="text-[16px] leading-[10px]">
+                    Actívalas y empieza a cumplirlas.
+                  </Text>
+                  <Text className="text-[16px]">
+                    ¡Ve a descubrirlas y acumula muchas gemas!
+                  </Text>
+                </Column>
+              </Row>
             </Section>
 
             <Section style={{ textAlign: "center", marginTop: "20px" }}>
@@ -362,12 +362,12 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
               </Button>
             </Section>
 
-            <Section className="mx-0 my-[30px] max-w-[650px] mx-auto overflow-hidden banner-gema-gift">
+            <Section className="mx-0 my-[30px] max-w-[650px] mx-auto">
               <Row>
                 <Column
                   style={{
                     // backgroundImage: `url(${baseUrl}/static/t-premia/Banner_gema_gift.png)`,
-                    backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893468/Banner_gema_gift_qfxyte.png)`,
+                    backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1757022002/Banner_nb8lrj.png)`,
 
                     backgroundSize: "contain",
                     backgroundPosition: "center",
@@ -385,21 +385,8 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                         paddingLeft: "50px",
                       }}
                     >
-                      <Text
-                        className="text-[20px] text-black leading-[32px]"
-                        style={{
-                          margin: 0,
-                          lineHeight: "32px",
-                          color: "#000000",
-                        }}
-                      >
-                        <strong>
-                          ¡Activa hoy mismo tus misiones <br />y empieza a
-                          disfrutar ya!
-                        </strong>
-                      </Text>
                       <Button
-                        className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] mt-[16px] text-white no-underline"
+                        className="rounded-full bg-[#319948] px-5 py-5 text-center font-semibold text-[12px] mt-[50px] text-white no-underline"
                         href={"https://newtpremia.com.mx"}
                       >
                         ¡Vamos a tpremia!
@@ -409,48 +396,6 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                 </Column>
               </Row>
             </Section>
-
-            {/* Banner Gift Mobile */}
-
-            <Section className="my-[30px] max-w-[650px] mx-auto overflow-hidden banner-gema-mobile-gift">
-              <Row>
-                <Column
-                  style={{
-                    // backgroundImage: `url(${baseUrl}/static/t-premia/Banner-mobile-gema-gift.png)`,
-                    backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/Banner-mobile-gema-gift_aapyqz.png)`,
-                    backgroundSize: "contain",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    height: "400px",
-                    width: "100%",
-                    display: "inline-table",
-                  }}
-                >
-                  <Section style={{ textAlign: "center", paddingTop: "32px" }}>
-                    <Text
-                      className="text-[18px] text-black leading-[32px]"
-                      style={{
-                        margin: 0,
-                        lineHeight: "32px",
-                        color: "#000000",
-                      }}
-                    >
-                      <strong>
-                        ¡Activa hoy mismo tus misiones <br />y empieza a
-                        disfrutar ya!
-                      </strong>
-                    </Text>
-                    <Button
-                      className="rounded-full w-[200px] bg-[#319948] px-5 py-5 text-center font-semibold text-[10px] mt-[16px] text-white no-underline"
-                      href={"https://newtpremia.com.mx"}
-                    >
-                      ¡Vamos a tpremia!
-                    </Button>
-                  </Section>
-                </Column>
-              </Row>
-            </Section>
-            {/* Banner Gift Mobile */}
 
             <Section className="text-center mb-[24px]">
               <table className="w-full">
