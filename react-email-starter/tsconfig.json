@@ -5,7 +5,9 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "target": "ES2017",
+    "lib": ["ES2017", "DOM"]
   },
   "include": ["**/*.ts", "**/*.tsx", "emails/index.js"],
   "exclude": ["node_modules", ".react-email"]

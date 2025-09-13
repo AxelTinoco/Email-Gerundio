@@ -5,11 +5,13 @@
   "scripts": {
     "build": "email build",
     "dev": "email dev",
-    "export": "email export"
+    "export": "email export",
+    "send-email": "npx ts-node send-test.tsx"
   },
   "dependencies": {
     "@react-email/components": "0.5.0",
     "dotenv": "^17.2.1",
+    "nodemailer": "^7.0.6",
     "postmark": "^4.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -17,8 +19,11 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.27.1",
     "@react-email/preview-server": "4.2.8",
+    "@types/node": "^24.3.1",
+    "@types/nodemailer": "^7.0.1",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
-    "react-email": "4.2.8"
+    "react-email": "4.2.8",
+    "ts-node": "^10.9.2"
   }
 }
