@@ -167,46 +167,8 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
               <Row className=" mt-[24px] mb-[32px] gems-container">
                 <Column
                   align="center"
-                  className="h-[40px] w-2/3 bg-[#F6F6F6] column-gems-main"
+                  className="h-[40px] w-2/3 bg-white column-gems-main"
                 >
-                  <Row>
-                    <Column className="gems-left-side">
-                      <Row>
-                        <Column align="left" width="32px">
-                          <Img
-                            // src={`${baseUrl}/static/t-premia/gema-rosa.png`}
-                            src={`https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema-rosa_kb2wbi.png`}
-                            width="32px"
-                            height="auto"
-                            alt="t-premia"
-                          />
-                        </Column>
-                        <Column align="left" className="pl-2">
-                          <Text className="m-0 text-[14px] whitespace-nowrap">
-                            %%%% gemas
-                          </Text>
-                        </Column>
-                      </Row>
-                    </Column>
-                    <Column className="gems-right-side">
-                      <Row>
-                        <Column align="center" width="32px">
-                          <Img
-                            // src={`${baseUrl}/static/t-premia/gema-dorada.png`}
-                            src={`https://res.cloudinary.com/dirjvoxdc/image/upload/v1755893469/gema-dorada_lebvou.png`}
-                            width="32px"
-                            height="auto"
-                            alt="t-premia"
-                          />
-                        </Column>
-                        <Column align="left" className="pl-2">
-                          <Text className="m-0 text-[14px] whitespace-nowrap">
-                            %%%% gemas
-                          </Text>
-                        </Column>
-                      </Row>
-                    </Column>
-                  </Row>
                 </Column>
                 <Column
                   align="center"
