@@ -7,7 +7,10 @@
     "noEmit": true,
     "strictNullChecks": true,
     "target": "ES2017",
-    "lib": ["ES2017", "DOM"]
+    "lib": ["ES2017", "DOM"],
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "esModuleInterop": true
   },
   "include": ["**/*.ts", "**/*.tsx", "emails/index.js"],
   "exclude": ["node_modules", ".react-email"]
