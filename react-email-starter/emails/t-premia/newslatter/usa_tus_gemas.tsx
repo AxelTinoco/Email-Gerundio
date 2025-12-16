@@ -197,7 +197,7 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
               <Row>
                 <Column>
                   <Text className="text-[24px] text-black leading-[24px] text-center mb-10">
-                    <strong>{'nombre'}, en tpremia te queremos hacer la vida más fácil.</strong>
+                    <strong>[nombre], en tpremia te queremos hacer la vida más fácil.</strong>
                   </Text>
                   <Text className="text-[24px] leading-[32px] text-center">
                     Ahora solo existe <strong>una sola gema</strong>
@@ -254,7 +254,7 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                   <Link href="Enlace_3" style={{ textDecoration: "none" }}>
                     <div
                       style={{
-                        backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1764712709/export_tt3ml3.png)`,
+                        backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1765833045/footer_gemas_doradas_ghasim.png)`,
                         backgroundSize: "contain",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",

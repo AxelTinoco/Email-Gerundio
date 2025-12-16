@@ -36,10 +36,8 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
 
   const textLine0Desktop = `l_text:arial_120_bold:Hola%252C,co_rgb:fff,g_north_west,y_1230,x_130`;
   const textLine1Desktop = `l_text:arial_120_bold:{nombre},co_rgb:FF1C72,g_north_west,y_1230,x_380`;
-
-  const heroImageWithText = `${cloudinaryBaseUrl}/${textLine0}/${textLine1}/v1765567832/terraza_mobile_b2r0cc.png`;
-  const heroImageWithTextDesktop = `${cloudinaryBaseUrl}/${textLine0Desktop}/${textLine1Desktop}/v1765567832/terraza_mobile_b2r0cc.png
-`;
+  const heroImageWithText = `${cloudinaryBaseUrl}/${textLine0}/${textLine1}/v1765589070/terraza_oof0l9.png`;
+  const heroImageWithTextDesktop = `${cloudinaryBaseUrl}/${textLine0Desktop}/${textLine1Desktop}/v1765589070/terraza_oof0l9.png`;
   return (
     <Html>
       <Head>

@@ -35,7 +35,7 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
   // Transformaciones de Cloudinary para agregar texto sobre el cuadro blanco
   // IMPORTANTE: La URL contiene {nombre} como variable para el gestor de email
   // Interlineado de 38px entre cada línea (80px de fuente + 38px de espacio = 118px entre líneas)
-  const textLine1 = `l_text:arial_80_bold:{nombre},co_rgb:000000,g_north,y_120`;
+  const textLine1 = `l_text:arial_80_bold:[nombre],co_rgb:000000,g_north,y_120`;
   const textLine2 = `l_text:arial_80_bold:${encodeURIComponent('Te damos la bienvenida a')},co_rgb:000000,g_north,y_220`;
   const textLine3 = `l_text:arial_80_bold:${encodeURIComponent('bordo de tpremia.')},co_rgb:000000,g_north,y_326`;
 
@@ -402,7 +402,7 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                 <Column>
                   <Link href="Enlace_3" style={{ textDecoration: "none", display: "block" }}>
                     <Img
-                      src="https://res.cloudinary.com/dirjvoxdc/image/upload/v1765319812/footer_diahan.png"
+                      src="https://res.cloudinary.com/dirjvoxdc/image/upload/v1765833766/footer_bienvenida_tsvj5f.png"
                       alt="Footer tpremia"
                       width="650"
                       height="auto"
