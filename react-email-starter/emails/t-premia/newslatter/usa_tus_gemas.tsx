@@ -254,7 +254,7 @@ export const TpremiaEducativeEmail = ({ username }: TpremiaUserEmailProps) => {
                   <Link href="Enlace_3" style={{ textDecoration: "none" }}>
                     <div
                       style={{
-                        backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1765833045/footer_gemas_doradas_ghasim.png)`,
+                        backgroundImage: `url(https://res.cloudinary.com/dirjvoxdc/image/upload/v1766083819/footer_gemas_doradas_xyx5r5.png)`,
                         backgroundSize: "contain",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
